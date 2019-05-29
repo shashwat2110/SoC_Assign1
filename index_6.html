@@ -1,0 +1,47 @@
+
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My First Subwindow
+        </title>
+    </head>
+
+    <style>
+        div{
+            border: 1px solid;
+            width: 900px;
+            height: 600px;
+            padding: 5px;
+            resize: both;
+            overflow: auto;
+        }
+    </style>
+
+    <body>
+        
+        <h1>My First Subwindow</h1>
+
+        Enter address:
+        <input type="text" id="addr">
+        <input type="button" value="GO!" onclick="loadSite()">
+        <br><br>
+        <div>
+            <iframe id="window" src="" style="width: 100%; height: 100%;">
+                iframes not supported.
+            </iframe>
+        </div>
+        
+    </body>
+
+    <script>
+        function loadSite(){
+            document.getElementById('window').setAttribute('src', document.getElementById('addr').value)
+        }
+
+        function changeSize(){
+            document.getElementById('window').setAttribute('style', 'height:' + document.getElementById('winheight').value + 'px; width: '+ document.getElementById('winwidth').value + ';')
+        }
+    </script>
+
+</html>
