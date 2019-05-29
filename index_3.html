@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>
+            My First Subwindow
+        </title>
+    </head>
+
+    <body>
+        <center>
+        <h1>My First Subwindow</h1>
+
+        Select website:
+        <select name="" id="dropdown">
+            <option value="0" selected>Select...</option>
+            <option value="1">Wikipedia</option>
+            <option value="2">Bing</option>
+            <option value="3">Pexels</option>
+            <option value="4">IPL</option>
+        </select>
+        <input type="button" value="Submit" onclick="loadSite()">
+
+        <br><br>
+
+        <iframe id="window" src="" style="position: relative; height: 80vh; width: 90vw;">
+            iframes not supported.
+        </iframe>
+        </center>
+        
+    </body>
+
+    <script>
+        function loadSite(){
+            if (document.getElementById('dropdown').value == 1){
+                document.getElementById('window').setAttribute('src', "https://www.wikipedia.org")
+            }
+            else if (document.getElementById('dropdown').value == 2){
+                document.getElementById('window').setAttribute('src', "https://www.bing.com")
+            }
+            else if (document.getElementById('dropdown').value == 3){
+                document.getElementById('window').setAttribute('src', "https://www.pexels.com")
+            }
+            else if (document.getElementById('dropdown').value == 4){
+                document.getElementById('window').setAttribute('src', "https://www.iplt20.com/")
+            }
+        }
+    </script>
+
+</html>
